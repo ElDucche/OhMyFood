@@ -1,0 +1,49 @@
+.localisation {
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 0;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $mid-gray;
+    color: $dark-gray;
+    font-size: 18px;
+    i {
+        margin-right: 20px;
+    }
+}
+
+.hero {
+    background-color: $light-gray;
+    margin: 0;
+    height: 22rem;
+    &__title {
+        font-size: 2.5rem;
+        margin: 0;
+        text-align: center;
+        padding: 20px 20px 0 20px;
+        font-weight: 700;
+    }
+    &__disclaimer {
+        font-weight: 100;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 5px 20px;
+    }
+    &__link{
+        background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+        color: #FFF;
+        margin: auto;
+        width: 55%;
+        height: 3rem;
+        display: flex;
+        font-size: 1.2rem;
+        padding: 5px 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        box-shadow: $box-shadow;
+
+    }
+}

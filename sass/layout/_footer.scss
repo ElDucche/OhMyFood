@@ -1,0 +1,21 @@
+.footer {
+    background-color: $dark-gray;
+    color:  #FFF;
+    width: 100%;
+    padding: 10px 0;
+
+    &__title{
+        font-family: 'Shrikhand';
+        font-weight: 300;
+        margin-left: 10px;
+    }
+
+    &__link{
+        margin: 10px;
+    }
+
+    i {
+        margin-right: .5rem;
+        width: 20px;
+    }
+}
