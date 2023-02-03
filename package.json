@@ -1,0 +1,21 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "opc project 3",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElDucche/OhMyFood.git"
+  },
+  "author": "guillaume leduc",
+  "license": "ISC",
+  "browserslist": "last 4 version",
+  "bugs": {
+    "url": "https://github.com/ElDucche/OhMyFood/issues"
+  },
+  "homepage": "https://github.com/ElDucche/OhMyFood#readme"
+}
