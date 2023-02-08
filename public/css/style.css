@@ -92,7 +92,7 @@ ul {
   font-size: 1.2rem;
   padding: 5px 10px;
   border-radius: 30px;
-  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .hero__link a {
@@ -101,6 +101,64 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.explain {
+  height: 32rem;
+}
+.explain__title {
+  padding-left: 1.5rem;
+}
+.explain__display {
+  display: grid;
+  width: 85%;
+  margin: auto;
+  gap: 25px;
+}
+
+.card {
+  display: flex;
+  max-width: 24rem;
+  height: 4rem;
+  position: relative;
+  align-items: center;
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.2);
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #2E2E2E;
+}
+.card:hover {
+  background-color: rgba(146, 86, 220, 0.1725490196);
+  cursor: pointer;
+}
+.card:hover .card__icone {
+  color: #9256dc;
+}
+.card__icone {
+  color: gray;
+  font-size: 25px;
+  width: 20%;
+  text-align: center;
+}
+.card__badge {
+  position: absolute;
+  left: -15px;
+  padding: 5px 10px;
+  border-radius: 100px;
+  background-color: #9256dc;
+  color: white;
+}
+.card__text {
+  font-size: 1.2rem;
+  width: 70%;
+}
+
+.restaurant {
+  background-color: #F6F6F6;
+  height: 32rem;
 }
 
 /*# sourceMappingURL=style.css.map */

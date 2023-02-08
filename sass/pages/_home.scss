@@ -52,5 +52,67 @@
     }
 }
 
+.explain {
+    height: 32rem;
+    
 
+    &__title{
+        padding-left: 1.5rem;
+    }
+
+    &__display {
+        display: grid;
+        width: 85%;
+        margin: auto;
+        gap: 25px;
+    }
+}
+
+.card {
+    display: flex;
+    max-width: 24rem;
+    height: 4rem;
+    position: relative;
+    align-items: center;
+    box-shadow: $box-shadow;
+    justify-content: space-evenly;
+    padding: .5rem;
+    background-color: $light-gray;
+    border-radius: 20px;
+    font-weight: 600;
+    color: $dark-gray;
+    &:hover{
+        background-color: #9256dc2c;
+        cursor: pointer;
+        .card__icone {
+            color: $color-primary;
+        }
+    }
+
+    &__icone {
+        color: gray;
+        font-size: 25px;
+        width: 20%;
+        text-align: center;
+    }
+
+    &__badge {
+        position: absolute;
+        left: -15px;
+        padding: 5px 10px;
+        border-radius: 100px;
+        background-color: $color-primary;
+        color: white;
+    }
+
+    &__text {
+        font-size: 1.2rem;
+        width: 70%;
+    }
+}
+
+.restaurant {
+    background-color: $light-gray;
+    height: 32rem;
+}
 
