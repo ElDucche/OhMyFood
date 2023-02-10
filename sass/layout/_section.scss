@@ -1,0 +1,28 @@
+.section {    
+    &__title{
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    &__display {
+        display: grid;
+        width: 85%;
+        margin: 0 auto;
+        gap: 25px;
+        margin-top: 1rem;
+        justify-self: center;
+    }
+    &--white {
+        min-height: 32rem;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+    &--gray {
+        min-height: 32rem;
+        display: flex;
+        flex-direction: column;
+        background-color: $light-gray;
+        padding-bottom: 3rem;
+    }
+}

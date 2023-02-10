@@ -4,6 +4,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -28,6 +32,7 @@ ul {
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 .footer {
@@ -83,38 +88,6 @@ ul {
   text-align: center;
   padding: 5px 20px;
 }
-.hero__link {
-  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  color: #FFF;
-  margin: auto;
-  width: 55%;
-  height: 3rem;
-  font-size: 1.2rem;
-  padding: 5px 10px;
-  border-radius: 30px;
-  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-.hero__link a {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.explain {
-  height: 32rem;
-}
-.explain__title {
-  padding-left: 1.5rem;
-}
-.explain__display {
-  display: grid;
-  width: 85%;
-  margin: auto;
-  gap: 25px;
-}
 
 .card {
   display: flex;
@@ -129,6 +102,8 @@ ul {
   border-radius: 20px;
   font-weight: 600;
   color: #2E2E2E;
+  transition: all;
+  transition-duration: 150ms;
 }
 .card:hover {
   background-color: rgba(146, 86, 220, 0.1725490196);
@@ -156,9 +131,124 @@ ul {
   width: 70%;
 }
 
-.restaurant {
+.restaurantCard {
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  transition: all;
+  transition-duration: 150ms;
+}
+.restaurantCard:hover {
+  scale: 102%;
+}
+.restaurantCard__image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  object-position: 50% 70%;
+  border-radius: 15px 15px 0 0;
+}
+.restaurantCard__badge {
+  background-color: rgb(169, 224, 209);
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.15rem;
+  color: rgb(53, 132, 103);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 0.75rem;
+}
+.restaurantCard__infos {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurantCard__infos__text {
+  line-height: 0.5rem;
+  padding-left: 1rem;
+}
+.restaurantCard__infos__text p {
+  font-weight: 0;
+}
+.restaurantCard__infos__like {
+  padding-right: 1rem;
+}
+.restaurantCard__infos__like input[type=checkbox] {
+  display: none;
+}
+.restaurantCard__infos__like label {
+  display: inline-block;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.restaurantCard__infos__like label i:first-child {
+  display: inline-block;
+}
+.restaurantCard__infos__like input[type=checkbox]:not(:checked) + label i:first-child {
+  display: inline-block;
+}
+.restaurantCard__infos__like input[type=checkbox]:checked + label i:first-child {
+  display: none;
+}
+.restaurantCard__infos__like input[type=checkbox]:not(:checked) + label i:last-child {
+  display: none;
+}
+.restaurantCard__infos__like input[type=checkbox]:checked + label i:last-child {
+  display: inline-block;
+  background-image: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientButton {
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  color: #FFF;
+  margin: auto;
+  width: 55%;
+  height: 3rem;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 30px;
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.gradientButton a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__title {
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+}
+.section__display {
+  display: grid;
+  width: 85%;
+  margin: 0 auto;
+  gap: 25px;
+  margin-top: 1rem;
+  justify-self: center;
+}
+.section--white {
+  min-height: 32rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.section--gray {
+  min-height: 32rem;
+  display: flex;
+  flex-direction: column;
   background-color: #F6F6F6;
-  height: 32rem;
+  padding-bottom: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
