@@ -1,0 +1,78 @@
+.illustration {
+    position: absolute;
+    top: 3rem;
+    width: 100%;
+    object-fit: cover;
+    height: 20rem;
+    z-index: -1;
+}
+
+.menu {
+    width: 100%;
+    &__title {
+        background-color: $light-gray;
+        padding-top: 1.5rem;
+        border-radius: 50px 50px 0 0;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $title ;
+        font-size: 1rem;
+        z-index: 1;
+        margin-top: 16rem;
+        h1 {
+            padding-left: .5rem;
+        }
+    }
+    &__section {
+        width: 90%;
+        margin: auto;
+        &__title {
+            font-weight: 100;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-bottom: .15rem;
+        }
+        &__separator{
+            display: block;
+            margin-top: .5rem;
+            margin-bottom: .75rem;
+            width: 3rem;
+            height: .25rem;
+            background-color: $color-tertiary;
+        }
+    }
+    &__card {
+        width: 90%;
+        margin: 1rem auto;
+        background-color: white;
+        position: relative;
+        //height: 8rem;
+        box-shadow: $box-shadow;
+        padding: .5rem;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        transition: all;
+        transition-duration: 150ms;
+        height: 4rem;
+        &:hover{
+            scale: 102%;
+        }
+        &__text {
+            line-height: .5rem;
+            padding-left: .25rem;
+            p {
+                font-weight: 100;
+            }
+        }
+        &__price {
+            font-weight: 600;
+            align-self: flex-end;
+            padding-right: .5rem;
+        }
+    }
+}
