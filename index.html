@@ -23,16 +23,16 @@
         <p class="hero__disclaimer">
             Découvrez des restaurants d'exception, selectionnés par nos soins.
         </p>
-        <div class="hero__link">
+        <div class="gradientButton">
             <a href="#restaurant">
                 Explorez nos restaurants
             </a>
         </div>
     </div>
-    <div class="explain">
+    <div class="section--white">
 
-       <h1 class="explain__title">Fonctionnement</h1>
-        <div class="explain__display">
+       <h1 class="section__title">Fonctionnement</h1>
+        <div class="section__display">
             <div class="card">
                 <div class="card__badge">
                     1
@@ -69,20 +69,82 @@
         </div>
     </div>
 
-    <div id="restaurant" class="restaurant">
-        Restaurant
-    
-        La palette du goût 
-        Ménilmontant
-    
-        La note enchantée 
-        Charonne
-    
-        À la française
-        Cité Rouge
-    
-        Le délice des sens 
-        Folie-Méricourt
+    <div id="restaurant" class="section--gray">
+        <h1 class="section__title">Restaurants</h1>
+        <div class="section__display">
+
+            <a class="restaurantCard" href="#">
+                <img src="./images/restaurants/paletteGout.jpg" alt="La palette du goût" class="restaurantCard__image"/>
+                <span class="restaurantCard__badge">Nouveau</span>
+                <div class="restaurantCard__infos">
+                    <div class="restaurantCard__infos__text">
+                        <h3>La palette du goût </h3>
+                        <p> Ménilmontant</p>
+                    </div>
+                    <div class="restaurantCard__infos__like">
+                        <input type="checkbox" id="like1">
+                        <label for="like1">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-sharp fa-solid fa-heart"></i>
+                        </label>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="restaurantCard" href="#">
+                <img src="./images/restaurants/noteEnchantee.jpg" alt="La note enchantée" class="restaurantCard__image"/>
+                <span class="restaurantCard__badge">Nouveau</span>
+                <div class="restaurantCard__infos">
+                    <div class="restaurantCard__infos__text">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                    </div>
+                    <div class="restaurantCard__infos__like">
+                        <input type="checkbox" id="like2">
+                        <label for="like2">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-sharp fa-solid fa-heart"></i>
+                        </label>
+                    </div>
+                </div>
+            </a>
+            
+
+            <a class="restaurantCard" href="./pages/alaFrancaise.html">
+                <img src="./images/restaurants/laFrancaise.jpg" alt="à la française" class="restaurantCard__image"/>
+                <div class="restaurantCard__infos">
+                    <div class="restaurantCard__infos__text">
+                        <h3>À la française</h3>
+                        <p>Cité Rouge</p>
+                    </div>
+                    <div class="restaurantCard__infos__like">
+                        <input type="checkbox" id="like3">
+                        <label for="like3">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-sharp fa-solid fa-heart"></i>
+                        </label>
+                    </div>
+                </div>
+            </a>
+
+            <a class="restaurantCard" href="#">
+                <img src="./images/restaurants/deliceSens.jpg" alt="Le délice des sens" class="restaurantCard__image"/>
+                <div class="restaurantCard__infos">
+                    <div class="restaurantCard__infos__text">
+                        <h3>Le délice des sens </h3>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <div class="restaurantCard__infos__like">
+                        <input type="checkbox" id="like4">
+                        <label for="like4">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-sharp fa-solid fa-heart"></i>
+                        </label>
+                    </div>
+                </div>
+            </a>
+
+        </div>
     </div>
     <footer class="footer">
         <h3 class="footer__title">
