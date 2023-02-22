@@ -9,3 +9,15 @@
         @content;
     }
 }
+
+@mixin smooth-appear {
+    $n : length(&);
+    @for $i from 1 through $n {
+      .menu-display &__card:nth-child(#{$i}) {
+        transition-delay: 400ms + #{($i * 100ms)};
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+  

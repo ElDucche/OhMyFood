@@ -8,7 +8,16 @@
 }
 
 .menu {
+    @include desktop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        &__card {
+            width: 100%;
+            font-size: .75rem;
+        }
+    }
     width: 100%;
+    padding-bottom: 4rem;
     &__title {
         background-color: $light-gray;
         padding-top: 1.5rem;
@@ -16,19 +25,22 @@
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         font-family: $title ;
         font-size: 1rem;
         z-index: 1;
-        margin-top: 16rem;
-        h1 {
-            padding-left: .5rem;
+        margin-top: 18rem;
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     &__section {
         width: 90%;
+        padding-bottom: 2rem;
         margin: auto;
         &__title {
             font-weight: 100;
@@ -46,33 +58,90 @@
         }
     }
     &__card {
-        width: 90%;
+        max-width: 25rem;
         margin: 1rem auto;
         background-color: white;
+        cursor: pointer;
         position: relative;
-        //height: 8rem;
+        overflow: hidden;
         box-shadow: $box-shadow;
-        padding: .5rem;
+        // padding: .5rem;
         border-radius: 15px;
         display: flex;
         justify-content: space-between;
-        transition: all;
-        transition-duration: 150ms;
-        height: 4rem;
-        &:hover{
-            scale: 102%;
-        }
+        height: 4.5rem;
+        opacity: 0;
+        transform: translateY(60px);
         &__text {
-            line-height: .5rem;
-            padding-left: .25rem;
+            & > h3 {
+                margin: 0;
+            }
+            & > p {
+                margin : 0;
+            }
+            padding-left: .75rem;
+            display: grid;
+            height: 100%;
+            gap: .5rem;
+            align-content: center;
+            z-index: -1;
             p {
                 font-weight: 100;
             }
         }
+        &:hover {
+            & .menu__card__price {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 4.5rem;
+                background-color: white;
+                padding-right: 0;
+                &::before {
+                    content: "...";
+                    height: 4.5rem;
+                    width: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: end;
+                }
+                &::after{
+                    content: "\f00c"; /* code Unicode pour l'icône de coche solide */
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    font-size: 1.5rem;
+                    display: flex;
+                    position: relative;
+                    right: 0;
+                    bottom: -0.75rem;
+                    justify-content: center;
+                    align-items: center;
+                    width: 4.5rem;
+                    margin-left: 4.5rem;
+                    border-radius: 0 15px 15px 0;
+                    height: 4.5rem;
+                    margin-left: 0.5rem;
+                    background-color: $color-tertiary;
+                }
+            }
+        }
         &__price {
+            z-index: 1;
             font-weight: 600;
-            align-self: flex-end;
-            padding-right: .5rem;
+            padding-right: .75rem;
+            align-items: flex-end;
+            padding-bottom: .75rem;
+            display: flex;
+        }
+    }
+    &__display {
+        .menu__card {
+            animation: smooth-appear 600ms forwards;
+        }
+        @for $i from 1 through 4 {
+            & :nth-child(#{$i}) {
+              animation-delay: 800ms + ($i - 1) * 200ms;
+            }
         }
     }
 }

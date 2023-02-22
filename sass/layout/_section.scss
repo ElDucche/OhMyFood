@@ -2,7 +2,9 @@
     min-height: 32rem;
     display: flex;
     flex-direction: column;
-
+    @include desktop {
+        min-height: 23rem;
+    }
     &__title{
         padding-left: 1.5rem;
         padding-top: 1.5rem;
@@ -15,6 +17,19 @@
         gap: 25px;
         margin-top: 1rem;
         justify-self: center;
+        &__restaurant {
+            @include desktop {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        &__function {
+            @include desktop {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+            }
+        }
     }
     &--white {
 

@@ -11,3 +11,14 @@ ul {
     list-style-type: none;
     padding: 0;
 }
+
+.light-gray {
+    background-color: $light-gray;
+}
+
+.icon::before {
+    /* removed font- based rules */
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }

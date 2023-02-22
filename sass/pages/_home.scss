@@ -34,6 +34,20 @@
 }
 
 .card {
+    @include desktop {
+        flex-direction: column;
+        height: 12rem;
+        width: 15rem;
+        align-items: center;
+        text-align: center;
+        &__badge {
+            top: -5px;
+            left: 0;
+        }
+        &__icone {
+            font-size: 50px;
+        }
+    }
     display: flex;
     max-width: 24rem;
     height: 4rem;
@@ -123,4 +137,3 @@
         }
     }
 }
-

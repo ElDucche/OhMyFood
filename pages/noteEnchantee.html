@@ -4,52 +4,148 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="stylesheet" href="../public/css/normalize.css">
+        <link rel="stylesheet" href="../public/css/style.css">
+        <script src="https://kit.fontawesome.com/fbb9c61f33.js" crossorigin="anonymous"></script>
+        <title>La note enchantée</title>
     </head>
-    <body>
-        La note enchantée
-
-        Entrées
-        Ravioles de foie gras 
-        Accompagnés de leur crème à la truffe
-        25€
-
-        Caviar osciètre 
-        Sur blini à la farine de blé noir
-        35€
-
-        Homard et espuma de potiron
-        Mariné aux zestes d'orange
-        20€
-
-        Foie gras de canard cuit entier
-        Confiture de figue et pain toasté
-        35€
+    <body class="light-gray">
+        <header class=" header--menu header">
+            <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="#">ohmyfood</a>
+        </header>
+        <img src="../images/restaurants/noteEnchantee.jpg" alt="Le délice des sens" class="illustration">
+        <div class="menu__title">
+            <div class="menu__title__content">
+                <h1>La note enchantée</h1>
+                <div class="like">
+                    <input type="checkbox" id="like4">
+                    <label for="like4">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-sharp fa-solid fa-heart"></i>
+                    </label>
+                </div>
+            </div> 
+        </div>
+        <div class="menu">
+            <section class="menu__section">    
+                <h1 class="menu__section__title">Entrées</h1>
+                <span class="menu__section__separator"></span>
+                <div class="menu__display">
+                    <div class="menu__card">
+                        <div class="menu__card__text">
+                            <h3>Ravioles de foie gras</h3>
+                            <p>Accompagnés de leur crème à la truffe</p>
+                        </div>
+                        <span class="menu__card__price">25€</span>
+                    </div>
+                    
+                    <div class="menu__card">
+                        <div class="menu__card__text">
+                            <h3>Caviar osciètre</h3>
+                            <p>Sur blini à la farine de blé noir</p>
+                        </div>
+                        <span class="menu__card__price">35€</span>
+                    </div>
+                    
+                    <div class="menu__card">
+                        <div class="menu__card__text">
+                            <h3>Homard et espuma de potiron</h3>
+                            <p>Mariné aux zestes d'orange</p>
+                        </div>
+                        <span class="menu__card__price">20€</span>
+                    </div>
+                    
+                    <div class="menu__card">
+                        <div class="menu__card__text">
+                            <h3>Foie gras de canard cuit entier</h3>
+                            <p>Confiture de figue et pain toasté</p>
+                        </div>
+                        <span class="menu__card__price">35€</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="menu__section">
+                <h1 class="menu__section__title">Plats</h1>
+                <span class="menu__section__separator"></span>
+                <div class="menu__display">
+                    <div class="menu__card">
+                        <div class="menu__card__text">
+                            <h3>Noix de coquilles Saint-Jacques</h3>
+                            <p>Sur lit de purée de céleri-rave</p>
+                        </div>
+                        <span class="menu__card__price">40€</span>
+                    </div>
+                    <div class="menu__card">
+                        <div class="menu__card__text">
+                            <h3>Langoustine poêlée</h3>
+                            <p>Purée de patate douce</p>
+                        </div>
+                        <span class="menu__card__price">35€</span>
+                    </div>
+                    
+                    <div class="menu__card">
+                        <div class="menu__card__text">
+                            <h3>Mijoté de queue de boeuf</h3>
+                            <p>Et riz sauvage aux zestes de citron</p>
+                        </div>
+                        <span class="menu__card__price">44€</span>
+                    </div>
+                </div>
+            </section>
                 
-        Plats
-        Noix de coquilles Saint-Jacques
-        Sur lit de purée de céleri-rave
-        40€
-
-        Langoustine poêlée
-        Purée de patate douce
-        35€
-
-        Mijoté de queue de boeuf 
-        Et riz sauvage aux zestes de citron
-        44€
-
-        Desserts
-        Macaron noisette et chocolat
-        Glace au caramel brun et sel de Guérande
-        18€
-
-        Baba au rhum revisité 
-        Avec son coulis de citron
-        22€
-
-        Tarte au citron meringuée 
-        Déstructurée
-        23€
+            <section class="menu__section">
+                <h1 class="menu__section__title">Desserts</h1>
+                <span class="menu__section__separator"></span>
+                <div class="menu__display">
+                    <div class="menu__card">
+                        <div class="menu__card__text">
+                            <h3>Macaron noisette et chocolat</h3>
+                            <p>Glace au caramel brun et sel de Guérande</p>
+                        </div>
+                        <span class="menu__card__price">18€</span>
+                    </div>
+                    
+                    <div class="menu__card">
+                        <div class="menu__card__text">
+                            <h3>Baba au rhum revisité</h3>
+                            <p>Avec son coulis de citron</p>
+                        </div>
+                        <span class="menu__card__price">22€</span>
+                    </div>
+                    
+                    <div class="menu__card">
+                        <div class="menu__card__text">
+                            <h3>Tarte au citron meringuée</h3>
+                            <p>Déstructurée</p>
+                        </div>
+                        <span class="menu__card__price">23€</span>
+                    </div>  
+                </div>
+            </section>
+            <div class="gradientButton">
+                <a href="#">Commander</a>
+            </div>
+        </div>
+        <footer class="footer">
+            <h3 class="footer__title">
+                ohmyfood 
+            </h3>
+            <ul>
+                <li class="footer__link">
+                    <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant </a>
+                </li>
+                <li class="footer__link">
+                    <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire </a>
+                </li>
+                <li class="footer__link">
+                   <a href="#"> Mentions légales </a>             
+                </li>
+                <li class="footer__link">
+                   <a href="#">Contact </a>              
+                </li>
+            </ul>
+        </footer>
     </body>
 </html>
