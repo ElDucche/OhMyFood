@@ -359,6 +359,7 @@ ul {
   gap: 0.5rem;
   align-content: center;
   z-index: -1;
+  text-overflow: ellipsis;
 }
 .menu__card__text > h3 {
   margin: 0;
@@ -378,12 +379,12 @@ ul {
   padding-right: 0;
 }
 .menu__card:hover .menu__card__price::before {
-  content: "...";
+  content: "";
+  width: 0.5rem;
   height: 4.5rem;
-  width: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: end;
+  background-color: white;
+  position: relative;
+  bottom: -0.75rem;
 }
 .menu__card:hover .menu__card__price::after {
   content: "\f00c"; /* code Unicode pour l'icône de coche solide */
