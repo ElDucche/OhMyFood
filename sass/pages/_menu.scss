@@ -75,9 +75,15 @@
         &__text {
             & > h3 {
                 margin: 0;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
             & > p {
                 margin : 0;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
             padding-left: .75rem;
             display: grid;
@@ -90,41 +96,8 @@
                 font-weight: 100;
             }
         }
-        &:hover {
-            & .menu__card__price {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                height: 4.5rem;
-                background-color: white;
-                padding-right: 0;
-                &::before{
-                    content: "";
-                    width: .5rem;
-                    height: 4.5rem;
-                    background-color: white;
-                    position: relative;
-                    bottom: -0.75rem ;
-                }
-                &::after{
-                    content: "\f00c"; /* code Unicode pour l'icône de coche solide */
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 900;
-                    font-size: 1.5rem;
-                    display: flex;
-                    position: relative;
-                    right: 0;
-                    bottom: -0.75rem;
-                    justify-content: center;
-                    align-items: center;
-                    width: 4.5rem;
-                    margin-left: 4.5rem;
-                    border-radius: 0 15px 15px 0;
-                    height: 4.5rem;
-                    margin-left: 0.5rem;
-                    background-color: $color-tertiary;
-                }
-            }
+        &__right {
+            display: flex;
         }
         &__price {
             z-index: 1;
@@ -132,7 +105,32 @@
             padding-right: .75rem;
             align-items: flex-end;
             padding-bottom: .75rem;
+            padding-left: .5rem;
             display: flex;
+        }
+        &__check {
+            background-color:  $color-tertiary;
+            font-size: 2rem;
+            color: white;
+            height: 4.5rem;
+            width: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all;
+            transition-duration: 1s;
+        }
+        &:hover {
+            .menu__card__check {
+                width: 4.5rem;
+                transition: all;
+                transition-duration: 1s;
+                & > i {
+                    transform: rotate(-360deg);
+                    transition: all;
+                    transition-duration: 1s;
+                }
+            }
         }
     }
     &__display {
