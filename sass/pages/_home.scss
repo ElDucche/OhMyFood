@@ -18,6 +18,8 @@
     background-color: $light-gray;
     margin: 0;
     height: 22rem;
+    display: grid;
+    place-content: center;
     &__title {
         font-size: 2.5rem;
         margin: 0;
@@ -45,11 +47,13 @@
             left: 0;
         }
         &__icone {
-            font-size: 50px;
+            & > i {
+                font-size: 50px;
+            }
         }
     }
     display: flex;
-    max-width: 24rem;
+    width: 100%;
     height: 4rem;
     position: relative;
     align-items: center;

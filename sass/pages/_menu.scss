@@ -41,7 +41,7 @@
     &__section {
         width: 90%;
         padding-bottom: 2rem;
-        margin: auto;
+        margin: 0 auto;
         &__title {
             font-weight: 100;
             text-transform: uppercase;
@@ -58,7 +58,6 @@
         }
     }
     &__card {
-        max-width: 25rem;
         margin: 1rem auto;
         background-color: white;
         cursor: pointer;
@@ -142,5 +141,9 @@
               animation-delay: 800ms + ($i - 1) * 200ms;
             }
         }
+    }
+    &__button {
+        position: relative;
+        left: 100%;
     }
 }
