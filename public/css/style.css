@@ -207,7 +207,7 @@ ul {
   padding-left: 1rem;
 }
 .restaurantCard__infos__text p {
-  font-weight: 0;
+  font-weight: 100;
 }
 
 .gradientButton {
