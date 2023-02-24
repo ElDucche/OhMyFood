@@ -461,22 +461,5 @@ ul {
     transform: translateY(0);
   }
 }
-@keyframes checkbox {
-  0% {
-    transform: rotate(0);
-  }
-  25% {
-    transform: rotate(90);
-  }
-  50% {
-    transform: rotate(180);
-  }
-  75% {
-    transform: rotate(270);
-  }
-  100% {
-    transform: rotate(360);
-  }
-}
 
 /*# sourceMappingURL=style.css.map */
