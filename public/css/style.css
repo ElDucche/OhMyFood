@@ -426,9 +426,11 @@ ul {
 .menu__display :nth-child(4) {
   animation-delay: 1400ms;
 }
-.menu__button {
-  position: relative;
-  left: 100%;
+@media screen and (min-width: 992px) {
+  .menu__button {
+    position: relative;
+    left: 100%;
+  }
 }
 
 .like {
