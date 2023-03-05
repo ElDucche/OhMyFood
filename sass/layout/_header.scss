@@ -20,6 +20,9 @@
             position: absolute;
             left: 1.5rem;
             top: 1.5rem;
+            &:hover {
+                animation: spin .7s ease-in-out forwards;
+            }
         }
     }
 }

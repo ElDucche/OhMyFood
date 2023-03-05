@@ -52,6 +52,9 @@ ul {
   left: 1.5rem;
   top: 1.5rem;
 }
+.header--menu i:hover {
+  animation: spin 0.7s ease-in-out forwards;
+}
 
 .home-header {
   position: absolute;
@@ -596,7 +599,7 @@ ul {
     color: hsl(165deg, 56%, 74%);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
     color: hsl(267deg, 66%, 60%);
   }
 }
