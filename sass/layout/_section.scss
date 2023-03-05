@@ -5,6 +5,9 @@
     @include desktop {
         min-height: 23rem;
     }
+    @include tablette {
+        min-height: 20rem;
+    }
     &__title{
         padding-left: 1.5rem;
         padding-top: 1.5rem;
@@ -23,9 +26,18 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
             }
+            @include tablette {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         &__function {
             @include desktop {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+            }
+            @include tablette {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 justify-items: center;

@@ -1,3 +1,24 @@
+.loader {
+    position: fixed;
+    top:0;
+    left:0;
+    display: block;
+    z-index: 5000;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    animation: shade-out 1s 3s 1 ease-in-out forwards;
+    & > i {
+        font-size: 8rem;
+        color: $color-primary;
+        animation: spin 3s linear infinite;
+        
+    }
+}
+
 .localisation {
     width: 100%;
     margin-top: 4rem;
@@ -49,6 +70,22 @@
         &__icone {
             & > i {
                 font-size: 50px;
+            }
+        }
+    }
+    @include tablette {
+        flex-direction: column;
+        height: 9rem;
+        width: 10rem;
+        align-items: center;
+        text-align: center;
+        &__badge {
+            top: -5px;
+            left: 0;
+        }
+        &__icone {
+            & > i {
+                font-size: 30px;
             }
         }
     }
@@ -107,7 +144,7 @@
     transition: all;
     transition-duration: 150ms;
     &:hover{
-        scale: 102%;
+       transform: scale(102%);
     }
     &__image {
         width: 100%;

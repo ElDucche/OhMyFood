@@ -53,6 +53,12 @@ ul {
   top: 1.5rem;
 }
 
+.home-header {
+  position: absolute;
+  top: -100px;
+  animation: descending 1s 3s forwards;
+}
+
 .footer {
   background-color: #2E2E2E;
   color: #FFF;
@@ -70,6 +76,26 @@ ul {
 .footer i {
   margin-right: 0.5rem;
   width: 20px;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 5000;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  animation: shade-out 1s 3s 1 ease-in-out forwards;
+}
+.loader > i {
+  font-size: 8rem;
+  color: hsl(267deg, 66%, 60%);
+  animation: spin 3s linear infinite;
 }
 
 .localisation {
@@ -141,12 +167,28 @@ ul {
     font-size: 50px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .card {
+    flex-direction: column;
+    height: 9rem;
+    width: 10rem;
+    align-items: center;
+    text-align: center;
+  }
+  .card__badge {
+    top: -5px;
+    left: 0;
+  }
+  .card__icone > i {
+    font-size: 30px;
+  }
+}
 .card:hover {
   background-color: rgba(146, 86, 220, 0.1725490196);
   cursor: pointer;
 }
 .card:hover .card__icone {
-  color: #9256dc;
+  color: hsl(267deg, 66%, 60%);
 }
 .card__icone {
   color: gray;
@@ -159,7 +201,7 @@ ul {
   left: -15px;
   padding: 5px 10px;
   border-radius: 100px;
-  background-color: #9256dc;
+  background-color: hsl(267deg, 66%, 60%);
   color: white;
 }
 .card__text {
@@ -178,7 +220,7 @@ ul {
   transition-duration: 150ms;
 }
 .restaurantCard:hover {
-  scale: 102%;
+  transform: scale(102%);
 }
 .restaurantCard__image {
   width: 100%;
@@ -213,7 +255,7 @@ ul {
 }
 
 .gradientButton {
-  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background: linear-gradient(180deg, hsl(317deg, 100%, 74%) 0%, hsl(267deg, 66%, 60%) 100%);
   color: #FFF;
   margin: auto;
   max-width: 25rem;
@@ -224,6 +266,8 @@ ul {
   border-radius: 30px;
   box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  transition: all;
+  transition-duration: 350ms;
 }
 .gradientButton a {
   width: 100%;
@@ -231,6 +275,11 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.gradientButton:hover {
+  background: linear-gradient(180deg, hsl(317deg, 100%, 79%) 0%, hsl(267deg, 66%, 65%) 100%), hsl(317deg, 100%, 79%);
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.4);
+  transition: all 350ms;
 }
 
 .section {
@@ -241,6 +290,11 @@ ul {
 @media screen and (min-width: 992px) {
   .section {
     min-height: 23rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .section {
+    min-height: 20rem;
   }
 }
 .section__title {
@@ -262,7 +316,20 @@ ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .section__display__restaurant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (min-width: 992px) {
+  .section__display__function {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .section__display__function {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -294,6 +361,16 @@ ul {
   .menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .menu__card {
+    width: 100%;
+    font-size: 0.75rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .menu__card {
     width: 100%;
@@ -337,7 +414,7 @@ ul {
   margin-bottom: 0.75rem;
   width: 3rem;
   height: 0.25rem;
-  background-color: #99E2D0;
+  background-color: hsl(165deg, 56%, 74%);
 }
 .menu__card {
   margin: 1rem auto;
@@ -390,7 +467,7 @@ ul {
   display: flex;
 }
 .menu__card__check {
-  background-color: #99E2D0;
+  background-color: hsl(165deg, 56%, 74%);
   font-size: 2rem;
   color: white;
   height: 4.5rem;
@@ -432,6 +509,11 @@ ul {
     left: 100%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu__button {
+    grid-column: span 2/span 2;
+  }
+}
 
 .like {
   padding-right: 1rem;
@@ -443,6 +525,8 @@ ul {
   display: inline-block;
   font-size: 2rem;
   cursor: pointer;
+  transition: all;
+  transition-duration: 1s;
 }
 .like label i:first-child {
   display: inline-block;
@@ -458,7 +542,8 @@ ul {
 }
 .like input[type=checkbox]:checked + label i:last-child {
   display: inline-block;
-  background-image: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background-image: linear-gradient(180deg, hsl(317deg, 100%, 74%) 0%, hsl(267deg, 66%, 60%) 100%);
+  animation: smooth-filling 1s ease-in-out forwards, bounce 1s ease-in-out;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -467,6 +552,74 @@ ul {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes smooth-filling {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes descending {
+  100% {
+    top: 0;
+    position: fixed;
+  }
+}
+@keyframes spin {
+  0% {
+    color: hsl(267deg, 66%, 60%);
+  }
+  33% {
+    color: hsl(317deg, 100%, 74%);
+  }
+  66% {
+    color: hsl(165deg, 56%, 74%);
+  }
+  100% {
+    transform: rotate(360deg);
+    color: hsl(267deg, 66%, 60%);
+  }
+}
+@keyframes shade-out {
+  99% {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    top: -200px;
+    display: none;
+  }
+}
+@keyframes hide-block {
+  to {
+    opacity: 0;
+    display: none;
   }
 }
 

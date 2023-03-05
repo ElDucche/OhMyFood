@@ -1,11 +1,17 @@
 // Colors
-$color-primary: #9256dc;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
+$color-primary: 	hsl(267, 66%, 60%);
+$color-secondary: hsl(317, 100%, 74%);
+$color-tertiary: 	hsl(165, 56%, 74%);
 
 $light-gray: #F6F6F6;
 $mid-gray: #E7E7E7;
 $dark-gray: #2E2E2E;
+
+$bright-primary : hsl(267, 66%, 65%);
+$bright-secondary: hsl(317, 100%, 79%);
+
+//Gradient
+$gradient : linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
 
 // Font
 $title: "Shrikhand";
@@ -13,3 +19,4 @@ $text: 'Roboto';
 
 // Shadow
 $box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.2);
+$box-shadow-darker: 0px 5px 9px 0px rgba(0,0,0,0.4);

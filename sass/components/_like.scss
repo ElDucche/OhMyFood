@@ -7,6 +7,8 @@
         display: inline-block;
         font-size: 2rem;
         cursor: pointer;
+        transition: all;
+        transition-duration: 1s;
         // position: absolute;
         // top: 0;
         // left: 0;
@@ -28,12 +30,13 @@
     }
     
     input[type="checkbox"]:not(:checked) + label i:last-child {
-        display: none;
+        display: none;  
     }
     
     input[type="checkbox"]:checked + label i:last-child {
         display: inline-block;
-        background-image: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+        background-image: $gradient;
+        animation: smooth-filling 1s ease-in-out forwards, bounce 1s ease-in-out;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }

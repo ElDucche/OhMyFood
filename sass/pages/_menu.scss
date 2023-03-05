@@ -16,6 +16,14 @@
             font-size: .75rem;
         }
     }
+    @include tablette {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        &__card {
+            width: 100%;
+            font-size: .75rem;
+        }
+    }
     width: 100%;
     padding-bottom: 4rem;
     &__title {
@@ -146,6 +154,9 @@
         @include desktop {  
             position: relative;
             left: 100%;
+        }
+        @include tablette {
+            grid-column: span 2 / span 2;
         }
     }
 }

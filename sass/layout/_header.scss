@@ -13,7 +13,6 @@
     align-items: center;
     box-shadow: 0 2px 4px 2px rgba(0,0,0,0.2);
     z-index: 1000;
-
     &--menu {
         i {
             color: $dark-gray;
@@ -23,4 +22,10 @@
             top: 1.5rem;
         }
     }
+}
+
+.home-header {
+    position: absolute;
+    top: -100px;
+    animation: descending 1s 3s forwards;
 }
