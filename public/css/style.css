@@ -534,19 +534,16 @@ ul {
 .like label i:first-child {
   display: inline-block;
 }
-.like input[type=checkbox]:not(:checked) + label i:first-child {
-  display: inline-block;
-}
-.like input[type=checkbox]:checked + label i:first-child {
+.like label i:last-child {
   display: none;
 }
-.like input[type=checkbox]:not(:checked) + label i:last-child {
+.like label:hover i:first-child {
   display: none;
 }
-.like input[type=checkbox]:checked + label i:last-child {
+.like label:hover i:last-child {
   display: inline-block;
   background-image: linear-gradient(180deg, hsl(317deg, 100%, 74%) 0%, hsl(267deg, 66%, 60%) 100%);
-  animation: smooth-filling 1s ease-in-out forwards, bounce 1s ease-in-out;
+  animation: smooth-filling 1.5s ease-in-out forwards, bounce 1s ease-in-out;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

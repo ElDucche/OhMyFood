@@ -14,30 +14,49 @@
         // left: 0;
         // transform: scale(0);
         // transition: all 0.3s ease-in-out;
-      }
+        & i {
+            &:first-child {
+                display: inline-block;
+            }
+            &:last-child {
+                display: none;
+            }
+        }
+        &:hover {
+            & i:first-child {
+                display: none;
+            }
+            & i:last-child {
+                display: inline-block;
+                background-image: $gradient;
+                animation: smooth-filling 1.5s ease-in-out forwards, bounce 1s ease-in-out;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
       
-      
-    label i:first-child {
-        display: inline-block;
-    }
+    // label i:first-child {
+    //     display: inline-block;
+    // }
     
-    input[type="checkbox"]:not(:checked) + label i:first-child {
-        display: inline-block;
-    }
+    // input[type="checkbox"]:not(:checked) + label i:first-child {
+    //     display: inline-block;
+    // }
     
-    input[type="checkbox"]:checked + label i:first-child {
-        display: none;
-    }
+    // input[type="checkbox"]:checked + label i:first-child {
+    //     display: none;
+    // }
     
-    input[type="checkbox"]:not(:checked) + label i:last-child {
-        display: none;  
-    }
+    // input[type="checkbox"]:not(:checked) + label i:last-child {
+    //     display: none;  
+    // }
     
-    input[type="checkbox"]:checked + label i:last-child {
-        display: inline-block;
-        background-image: $gradient;
-        animation: smooth-filling 1s ease-in-out forwards, bounce 1s ease-in-out;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+    // input[type="checkbox"]:checked + label i:last-child {
+    //     display: inline-block;
+    //     background-image: $gradient;
+    //     animation: smooth-filling 1s ease-in-out forwards, bounce 1s ease-in-out;
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;
+    // }
 }
